@@ -4,9 +4,24 @@ All notable changes to `phil/phone-bundle` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## 0.1.2-alpha - 2026-11-25
+
+### Changed
+
+- The development requirements ask for the latest minor of each dependency (`doctrine/orm` 3.8, `doctrine/dbal` 4.6,
+  `doctrine/doctrine-bundle` 3.4, `twig/twig` 3.31).
+- The development requirements take `twig/twig` 3.31.1 or later, which fixes the advisories of its sandbox published on
+  2026-11-24.
+
+### Security
+
+- `PhoneNumberTransformer` refused a number in no numbering plan with a message that held the number, and passed on
+  the messages of `phil/phone` that held the text typed: a message that reached a log kept personal data there. They
+  name the reason only.
+
 ## 0.1.1-alpha - 2026-11-17
 
-The next version is 0.1.1-alpha: documentation only.
+Documentation only.
 
 ### Changed
 
